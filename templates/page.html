@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Essential things about</title>
+    <link rel="stylesheet" href="static/styles/page.css">
+</head>
+<body>
+    <div class="header">
+        <a href="/"><img src="static/logo.png" height="60px"></a>
+        <p>Essential Things About</p>
+    </div>
+
+
+    <div class="container">
+        <div class="left-bar">
+            <div style="text-align: center"><img src="{{img}}"></div>
+
+            {%for x in dictionary_correct%}
+                <div class="tr">
+                    <p class="th"><b>{{x}}</b></p>
+                    <p class="td">{{dictionary_correct[x]}}</p>
+                </div>
+            {%endfor%}
+        </div>
+        <div class="text-content">
+            <h1>{{title}}</h1>
+            <p>{{p}}</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
