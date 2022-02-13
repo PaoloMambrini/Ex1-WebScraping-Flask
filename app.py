@@ -23,9 +23,10 @@ def homepage():
 @app.route('/<usr>')
 def user(usr):
     input = usr
+    #verifichiamo se è presente l'underscore
     if input.replace('_','') == input:
         input = input.split()
-        #rendiamo maiuscola la lettera prima di ogni parola
+        #rendiamo maiuscola la lettera prima di ogni parola, per formare il link di wikipedia
         link=""
         for i in input:
 
@@ -66,6 +67,7 @@ def user(usr):
                 for x in img_:
                     img = str(x.get('src'))
             except AttributeError:
+                #se non trova nessuna immagine su wikipedia
                 img=""
 
             # title
